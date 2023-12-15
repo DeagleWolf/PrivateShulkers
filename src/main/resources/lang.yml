@@ -1,0 +1,66 @@
+# This file is the language file for the PrivateShulkers plugin.
+# You can customize this file as you wish.
+# Please do not directly delete messages that you do not want to be sent as it may cause errors.
+# Instead of deleting, you can set the disabled variable to true.
+#
+# This text is added to the beginning of messages when "send-with-prefix" is true.
+prefix: "&3Shulkers &8» "
+# The complete message list of the plugin. It can be edited and customized from here.
+# You can edit this file while the server is running.
+# To apply changes to the server, you must use the /ps reload command in-game.
+messages:
+  configreload:
+    # The text to be sent.
+    text: "&7Config reloaded."
+    # Sends as an actionbar instead of in chat.
+    # Typically used for messages that are likely to be spammed.
+    send-with-actionbar: false
+    # If true, this message will automatically have the prefix variable added to its beginning.
+    send-with-prefix: true
+    # If true, this message will be disabled and will not provide any response.
+    disabled: false
+  nopermission:
+    text: "&7You do not have permission to use this."
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
+  cantbreakshulker:
+    text: "&7You cannot break this shulker."
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
+  shulkeropened:
+    text: "&7Shulker opened."
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
+  cantinteractshulker:
+    text: "&7You cannot open this shulker."
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
+  shulkerplaced:
+    text: "&7The shulker has been placed and protected."
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
+  shulkerbroken:
+    text: "&7The shulker has been broken."
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
+  unknowncommand:
+    text: "&7Unknown command. Type &f/ps help &7for a list of commands."
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
+  commandlist:
+    text: "&7--------&f CommandList &7--------\n/ps reload: &fReload configs.\n&7/ps help: &fList commands."
+    send-with-actionbar: false
+    send-with-prefix: false
+    disabled: false
+  shulkerplaceprevent:
+    text: "&7You can't place a block that would prevent the shulker from opening!"
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false
