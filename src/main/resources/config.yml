@@ -1,5 +1,7 @@
 # The name of the Shulker world.
 worldname: "shulker"
+# When this setting is activated, placing any blocks other than shulkers is prevented in the specified world.
+prevent-place-other-blocks: true
 # When this setting is activated, placing any blocks on top of shulkers in the specified world is prevented.
 prevent-block-shulker: true
 # When this setting is true, it automatically gives the broken shulker to the player.

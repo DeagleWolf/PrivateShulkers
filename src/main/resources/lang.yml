@@ -64,3 +64,8 @@ messages:
     send-with-actionbar: false
     send-with-prefix: true
     disabled: false
+  cantplaceotherblocks:
+    text: "&7You can't place blocks other than shulkers!"
+    send-with-actionbar: false
+    send-with-prefix: true
+    disabled: false

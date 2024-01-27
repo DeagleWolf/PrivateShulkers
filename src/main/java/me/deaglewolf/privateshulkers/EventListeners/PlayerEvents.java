@@ -44,12 +44,17 @@ public class PlayerEvents implements Listener {
             if (blockBelow.getType().name().toLowerCase().contains("shulker")) {
                 MessageManager.SendMessage(event.getPlayer(), "shulkerplaceprevent");
                 event.setCancelled(true);
+                return;
             }
         }
-        if (!event.getBlock().getType().name().toLowerCase().contains("shulker")) return;
-        if (event.getPlayer().getWorld().getName().equalsIgnoreCase(config.getString("worldname")) && event.getBlock().getType().name().toLowerCase().contains("shulker")) {
-            Auth.RegisterPlacedShulker(event.getPlayer(), event.getBlock());
-            MessageManager.SendMessage(event.getPlayer(), "shulkerplaced");
+        if (event.getPlayer().getWorld().getName().equalsIgnoreCase(config.getString("worldname"))) {
+            if (event.getBlock().getType().name().toLowerCase().contains("shulker")) {
+                Auth.RegisterPlacedShulker(event.getPlayer(), event.getBlock());
+                MessageManager.SendMessage(event.getPlayer(), "shulkerplaced");
+            } else if (config.getBoolean("prevent-place-other-blocks")) {
+                MessageManager.SendMessage(event.getPlayer(), "cantplaceotherblocks");
+                event.setCancelled(true);
+            }
         }
     }
     @EventHandler(priority = EventPriority.MONITOR)
