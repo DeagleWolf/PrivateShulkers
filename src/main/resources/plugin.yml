@@ -3,7 +3,6 @@ version: '1.2'
 main: me.deaglewolf.privateshulkers.PrivateShulkers
 author: DeagleWolf
 description: Shulker lock plugin for BoxPvP servers.
-website: discord.gg/GMadQrHdMn
 api-version: '1.13'
 commands:
   privateshulker:
