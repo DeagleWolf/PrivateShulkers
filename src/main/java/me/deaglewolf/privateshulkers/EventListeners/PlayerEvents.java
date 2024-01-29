@@ -28,7 +28,11 @@ import java.util.HashMap;
 public class PlayerEvents implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onInteract(PlayerInteractEvent event) {
-        if (event.getClickedBlock() != null && event.getClickedBlock().getType().name().toLowerCase().contains("shulker") && event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+        if (event.getClickedBlock() != null
+                && event.getClickedBlock().getType().name().toLowerCase().contains("shulker")
+                && event.getAction() == Action.RIGHT_CLICK_BLOCK
+                && event.getPlayer().getWorld().getName().equalsIgnoreCase(PrivateShulkers.config.getString("worldname"))) {
+
             if (!Auth.CheckPermission(event.getPlayer(), event.getClickedBlock())) {
                 MessageManager.SendMessage(event.getPlayer(), "cantinteractshulker");
                 event.setCancelled(true);
